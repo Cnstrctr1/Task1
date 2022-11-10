@@ -12,13 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
-        <activity
-            android:name=".MainActivity2"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+
         <activity
             android:name="activities.ActivityA"
             android:exported="true"
@@ -34,16 +28,19 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
         <activity
             android:name="activities.ActivityB"
             android:clearTaskOnLaunch="true"
-            android:label="singleTask launchMode"
-            android:launchMode="singleTask"
             android:taskAffinity=".ActivityB" />
-        <activity android:name="activities.ActivityC" />
+
+        <activity android:name="activities.ActivityC"
+                  android:taskAffinity=".ActivityB" />
+
+
         <activity
             android:name="activities.ActivityD"
-            android:taskAffinity=".ActivityD" />
+            android:taskAffinity=".ActivityB" />
     </application>
 
 </manifest>
