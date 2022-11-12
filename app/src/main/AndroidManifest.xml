@@ -16,8 +16,7 @@
         <activity
             android:name="activities.ActivityA"
             android:exported="true"
-            android:launchMode="singleTask"
-            android:taskAffinity=".ActivityA">
+            android:launchMode="singleTop" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,17 +29,13 @@
         </activity>
 
         <activity
-            android:name="activities.ActivityB"
-            android:clearTaskOnLaunch="true"
-            android:taskAffinity=".ActivityB" />
+            android:name="activities.ActivityB" />
 
-        <activity android:name="activities.ActivityC"
-                  android:taskAffinity=".ActivityB" />
+        <activity android:name="activities.ActivityC" />
 
 
         <activity
-            android:name="activities.ActivityD"
-            android:taskAffinity=".ActivityB" />
+            android:name="activities.ActivityD" />
     </application>
 
 </manifest>
